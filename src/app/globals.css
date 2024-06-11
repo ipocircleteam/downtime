@@ -1,0 +1,268 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #ffffff;
+}
+
+.custom-btn-transition {
+  transition: background-color 0.2s ease;
+}
+
+.custom-menu-transition {
+  position: fixed;
+  right: -90vw;
+  transition: right 0.5s ease-in-out;
+}
+
+.custom-menu-pos {
+  position: fixed;
+  right: 0vw;
+}
+
+.custom-tablerow {
+  border-bottom: rgb(224, 221, 221) 1px solid;
+  height: 40px;
+}
+
+.shift-view {
+  background-color: #c0ddf9;
+}
+
+.translate-feature-right {
+  position: relative;
+  left: 0;
+  animation: TranslateXRight 0.5s ease-in forwards;
+}
+
+@keyframes TranslateXRight {
+  from {
+    left: 0;
+  }
+  to {
+    left: 100px;
+  }
+}
+
+.translate-feature-left {
+  position: relative;
+  right: 0;
+  animation: TranslateXLeft 0.5s ease-in forwards;
+}
+
+@keyframes TranslateXLeft {
+  from {
+    right: 0;
+  }
+  to {
+    right: 100px;
+  }
+}
+
+.custom-animate-ping {
+  width: 10px;
+  height: 10px;
+  background-color: rgb(34 197 94 / var(--tw-text-opacity));
+  border-radius: 50%;
+  animation: radiate 1s infinite;
+}
+
+@keyframes radiate {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.5;
+  }
+}
+
+.custom-scale {
+  position: fixed;
+  transform: scale(0);
+  animation: ScaleUp 0.1s forwards ease-in-out;
+  animation: Popup 0.1s forwards ease-in-out;
+}
+
+@keyframes Popup {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  @keyframes ScaleUp {
+    from {
+      height: 0vw;
+    }
+    to {
+      height: 30vw;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  @keyframes ScaleUp {
+    from {
+      height: 0vw;
+    }
+    to {
+      height: 40vw;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  @keyframes ScaleUp {
+    from {
+      height: 0vw;
+    }
+    to {
+      height: 80vw;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  @keyframes ScaleUp {
+    from {
+      height: 0vw;
+    }
+    to {
+      height: 90vw;
+    }
+  }
+}
+
+@media screen and (max-width: 350px) {
+  @keyframes ScaleUp {
+    from {
+      height: 0vw;
+    }
+    to {
+      height: 120vw;
+    }
+  }
+}
+
+.custom-gradient {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    270deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(0, 190, 157, 1) 0%,
+    rgba(9, 74, 121, 1) 100%
+  );
+}
+
+.scaling-transition {
+  transition: transform(scale()) 10s ease-in-out;
+}
+
+.scaling-transition:hover {
+  transform: scale(1);
+  animation: Scaling 0.1s forwards linear;
+}
+
+@keyframes Scaling {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
+}
+
+.custom-shadow-table {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
+}
+
+.custom-shadow-panel {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.custom-bg-image {
+  background-image: url('../../public/backgrounds/tracker.jpeg');
+  background-size: cover;
+}
+
+.custom-filter-panel {
+  width: 0vw;
+  padding: 0;
+  margin: 0;
+  animation: OpenFilter 0.5s ease-in-out forwards;
+}
+
+@keyframes OpenFilter {
+  from {
+    width: 0vw;
+  }
+  to {
+    width: 40vw;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  @keyframes OpenFilter {
+    from {
+      width: 0vw;
+    }
+    to {
+      width: 50vw;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  @keyframes OpenFilter {
+    from {
+      width: 0vw;
+    }
+    to {
+      width: 60vw;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  @keyframes OpenFilter {
+    from {
+      width: 0vw;
+    }
+    to {
+      width: 70vw;
+    }
+  }
+}
+
+.translate-algo {
+  transform: translateY(400px);
+}
+
+.loader {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
